@@ -1,0 +1,51 @@
+/*
+  File Name: products.scss
+  Author: Leonardo da Costa
+  Description: Theme Product section styles.
+*/
+
+//
+// Section - Product
+// --------------------------------------------------
+
+.section-products {
+
+  .products-wrapper { // Products Flexbox container
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-top: 3rem;
+
+    .product-box { // Product flex box column
+      text-align: center;
+      flex: 0 50%;
+      margin-bottom: 3rem;
+  
+      &:last-child {
+        @media (max-width: 768px) {
+          flex: 0 100%;
+        }
+      }  
+  
+      // Desktop
+      @media (min-width: 992px) {
+        flex: 0 20%;
+      }
+  
+      img { // Product image
+        margin-bottom: 1rem;
+        max-width: 100px;
+
+        @media (min-width: 768px) { // Tablet
+          margin-bottom: 2rem;
+          max-width: 130px;
+        }
+      }
+  
+      .product-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

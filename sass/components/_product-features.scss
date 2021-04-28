@@ -1,0 +1,33 @@
+/*
+  File Name: product-features.scss
+  Author: Leonardo da Costa
+  Description: Theme's product featute <ul> component styles.
+*/
+
+//
+// Component - Product Features
+// --------------------------------------------------
+
+.product-features {
+  margin-bottom: 3rem;
+
+  li {
+    margin-bottom: 1rem;
+    position: relative;
+    list-style-type: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -40px;
+      width: 30px;
+      height: 32px;
+      background-image: url('../images/check.svg');
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+/*
+  File Name: theme.scss
+  Author: Leonardo da Costa
+  Description: General theme styles.
+*/
+
+.page-heading-wrapper,
+.entry-header {
+  margin-bottom: 1.8rem;
+  text-align: center;
+
+  @media (min-width: 768px) { // Tablet
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+  }
+
+  @media (min-width: 768px) { // Tablet
+    max-width: 930px;
+  }
+
+  .page-heading,
+  .entry-title {
+    @media (min-width: 768px) { // Tablet
+      font-size: 3.1rem;
+    }
+  }
+}
+
+.p1 {
+  margin: 0;
+}
+
+.section {
+  @media (min-width: 1440px) { // Large Desktop
+    position: relative;
+    top: -70px;
+  }
+}
+
+.page-template-default {
+  main.site-main article {
+    position: relative;
+
+    @media (min-width: 768px) { // Tablet
+      top: -50px;
+    }
+
+    @media (min-width: 992px) { // Desktop
+      top: -100px;
+    }    
+
+    @media (min-width: 1440px) { // Large Desktop
+      top: -130px;
+    } 
+  }
+}

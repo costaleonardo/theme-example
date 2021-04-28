@@ -1,0 +1,45 @@
+/*
+  File Name: buttons.scss
+  Author: Leonardo da Costa
+  Description: Theme button styles.
+*/
+
+.btn-outline-primary { // Learn more button
+  border-color: $color-primary;
+  border-radius: 5px;
+  color: $color-primary;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 0.3rem 1rem;
+  transition: 0.5s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    box-shadow: none;
+    color: $white;
+  }
+
+  @media (min-width: 768px) {
+    padding: .3rem 2rem;
+  }
+}
+
+.btn-buy-now { // Buy Now Button
+  background: linear-gradient(-47deg, #00439A 0%, #00B2EC 24%, #00439A 100%);
+  border-radius: 5px;
+  border: transparent;
+  color: $yellow;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: .3rem 2rem;
+  transition: all .3s;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+
+  &:hover {
+    color: $yellow;
+    text-shadow: none;
+  }
+}

@@ -1,0 +1,73 @@
+/*
+  File Name: front-page.scss
+  Author: Leonardo da Costa
+  Description: Theme Front Page styles.
+*/
+
+//
+// Section - Showcase
+// --------------------------------------------------
+
+.section-showcase {
+
+  @media (min-width: 992px) { // Desktop
+    position: relative;
+    top: -40px;
+  }
+
+  @media (min-width: 1440px) { // Large Desktop
+    top: -95px
+  }
+
+  .showcase-featured-wrapper { // Showcase featured image div
+    @media (max-width: 425px) { // Mobile
+      margin-bottom: 1.5rem;
+
+      text-align: center;
+    }
+  }
+
+  .showcase-content-wrapper { // Showcase right column content
+    @media (min-width: 992px) { // Desktop
+      padding-top: 4rem;
+    }
+  }
+
+  .showcase-featured { // Showcase feature image
+    width: 100%;
+
+    @media (max-width: 425px) { // Mobile
+      max-width: 250px;
+    }
+
+    @media (orienation: landscape) { // Portrait
+      display: none;
+    }
+  }
+
+  .showcase-heading { // Showcase H1 heading
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 425px) { // Mobile
+      text-align: center;
+    }
+
+    @media (min-width: 1440px) { // Large Desktop
+      font-size: 3rem;
+    }
+  }
+}
+
+.page-template-front-page { 
+  .section-products {
+    @media (min-width: 992px) {
+      position: relative;
+      top: -10px;
+    }
+  
+    @media (min-width: 1440px) {
+      top: -50px
+    }
+  }
+}

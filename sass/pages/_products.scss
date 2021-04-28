@@ -1,0 +1,60 @@
+/*
+  File Name: products.scss
+  Author: Leonardo da Costa
+  Description: Theme's Products page styles.
+*/
+
+//
+// Section - Products Page
+// --------------------------------------------------
+
+.section-products-page {
+
+  .container {
+    @media (min-width: 992px) { // Desktop
+      max-width: 960px;
+    }
+  }
+
+  .products-wrapper { // Products Flexbox container
+    display: flex;
+    flex-wrap: wrap;
+
+    .product-box { // Product flex box column
+      text-align: center;
+      flex: 0 50%;
+      margin-bottom: 3rem;
+
+      @media (min-width: 768px) { // Tablet
+        flex: 0 33%;
+      }
+  
+      &:nth-last-of-type(-n+2) { // Get last two .product-box divs
+        @media (min-width: 768px) { // Tablet
+          flex: 0 50%;
+        }
+      }  
+
+      &:last-child { // Get the last .product-box div
+        @media (max-width: 425px) { // Mobile
+          flex: 0 100%;
+        }
+      }
+  
+      img { // Product image
+        margin-bottom: 1rem;
+        max-width: 100px;
+
+        @media (min-width: 992px) { // Desktop
+          margin-bottom: 2rem;
+          max-width: 200px;
+        }
+      }
+  
+      .product-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+/*
+  File Name: footer.scss
+  Author: Leonardo da Costa
+  Description: Theme Footer styles.
+*/
+
+//
+// Footer
+// --------------------------------------------------
+
+
+#wrapper-footer {
+  background-image: url('../images/mb-footer-bg.png');
+  background-size: 100% 370px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  color: $white;
+
+  min-height: 370px;
+
+  @media (min-width: 768px) { // Tablet
+    background-image: url('../images/tb-footer-bg.png');
+    background-size: 100% 184px;
+    min-height: 184px;
+  }
+
+  @media (min-width: 992px) { // Desktop
+    background-image: url('../images/dk-footer-bg.png');
+    background-size: 100% 238px;
+    min-height: 238px;
+  }
+
+  @media (min-width: 1440px) { // Large Desktop
+    background-image: url('../images/lg-dk-footer-bg.png');
+    background-size: 100% 345px;
+    min-height: 345px;
+  }
+
+  @media (min-width: 2560px) { // XL Desktop
+    background-image: url('../images/xl-dk-footer-bg.png');
+    background-size: 100% 620px;
+    min-height: 620px;
+  }  
+
+  .footer-content { // Footer content div
+    position: relative;
+    top: 135px;
+
+    @media (min-width: 768px) {
+      top: 85px;
+    }
+
+    @media (min-width: 992px) {
+      top: 120px;
+    }
+
+    @media (min-width: 1440px) {
+      top: 210px;
+    }
+
+    @media (min-width: 2560px) {
+      top: 450px;
+    }
+  }
+
+  .footer-info-wrapper { // Footer copyright and footer menu div
+    @media (max-width: 425px) {
+      margin-bottom: .5rem;
+    }
+
+    .footer-contact {
+      margin-bottom: 1.5rem;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        text-align: unset;
+        margin-bottom: 0;
+        margin-top: 30px;
+      }
+    }
+
+    ul li a {
+      font-size: 14px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #menu-footer-menu { // Footer menu unordered list
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: 425px) {
+      text-align: center;
+    }
+
+    li {
+      color: $white;
+      display: inline;
+
+      margin-right: 1rem;
+
+      list-style-type: none;
+    }
+
+    li a { // List anchor
+      color: $white;
+    }
+  }
+
+  .copyright-wrapper { // Brand logo and copyright div
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: right;
+    }
+
+    img { // Logo 
+      margin-bottom: .5rem;
+      max-width: 119px;
+    }
+  }
+}

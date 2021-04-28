@@ -1,0 +1,274 @@
+/*
+  File Name: header.scss
+  Author: Leonardo da Costa
+  Description: Theme Header styles.
+*/
+
+//
+// Header
+// --------------------------------------------------
+
+.navbar {
+  background-image: url('../images/mb-header-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+  position: relative;
+
+  padding-bottom: 2.375rem;
+
+  @media (max-width: 425px) {
+    padding-bottom: 6rem;
+  }
+
+  @media (min-width: 667px) { // Tablet
+    background-image: url('../images/mb-header-landscape-bg.png');
+    background-size: 100% 152px;
+    min-height: 152px;
+
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 768px) { // Tablet
+    background-image: url('../images/tb-header-bg.png');
+    background-size: 100% 152px;
+    min-height: 152px;
+
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 992px) { // Desktop
+    background-image: url('../images/dk-header-bg.png');
+    background-size: 100% 205px;
+    min-height: 205px;
+  }
+
+  @media (min-width: 1440px) { // Large Desktop
+    background-image: url('../images/lg-dk-header-bg.png');
+    background-size: 100% 298px;
+    min-height: 298px;
+  }
+
+  @media (min-width: 2560px) { // XL Desktop
+    background-image: url('../images/xl-dk-header-bg.png');
+    background-size: 100% 530px;
+    min-height: 530px;
+  }  
+
+  .navbar-brand {
+    position: relative;
+
+    @media only screen // iPhone 6, 7 and 8 landscape
+    and (min-device-width: 375px) 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) { 
+      bottom: 35px;
+    }
+
+    @media only screen // iPhone 6+, 7+ and 8+ landscape
+    and (min-device-width: 414px) 
+    and (max-device-width: 736px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) { 
+      bottom: 35px;
+    }
+  }
+
+  #navbarNavDropdown {
+    position: relative;
+
+    @media only screen // iPhone 6, 6S, 7 and 8 landscape
+    and (min-device-width: 375px) 
+    and (max-device-width: 667px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) { 
+      bottom: 55px;
+    }
+
+    @media only screen // iPhone 6+, 7+ and 8+ landscape
+    and (min-device-width: 414px) 
+    and (max-device-width: 736px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) { 
+      bottom: 55px;
+    }
+  }
+
+  .container {
+    @media only screen // iPhone 6+, 7+ and 8+ landscape
+    and (min-device-width: 414px) 
+    and (max-device-width: 736px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) { 
+      max-width: 650px;
+    }
+
+    @media (min-width: 768px) {
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+      position: relative;
+      bottom: 52px;
+    }
+
+    @media (min-width: 992px) {
+      max-width: 850px;
+      bottom: 70px;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 1150px;
+      bottom: 100px;
+    }
+
+    @media (min-width: 2560px) {
+      max-width: 1400px;
+      bottom: 170px;
+    }
+  }
+
+  .navbar-brand { // Navbar Logo
+  
+    img {
+      max-width: 140px;
+
+      @media (min-width: 375px) {
+        max-width: 180px;
+      }
+
+      @media only screen // iPhone 6, 6S, 7 and 8 landscape
+      and (min-device-width: 375px) 
+      and (max-device-width: 667px) 
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: landscape) { 
+        max-width: 100px;
+      }
+
+      @media only screen // iPhone 6+, 7+ and 8+ landscape
+      and (min-device-width: 414px) 
+      and (max-device-width: 736px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: landscape) { 
+        max-width: 120px;
+      }
+
+      @media (min-width: 768px) {
+        max-width: 140px;
+        padding-top: 35px;
+      }
+
+      @media (min-width: 992px) {
+        max-width: 150px;
+        padding-top: 20px;
+      }      
+
+      @media (min-width: 1440px) {
+        max-width: 210px;
+      }
+
+      @media (min-width: 2560px) {
+        max-width: 320px;
+        padding-top: 10px;
+      }
+    }
+
+    .navbar-toggle {
+      /* (80px - button height 34px) / 2 = 23px */
+      margin-top: 23px;
+      padding: 9px 10px !important;
+    }
+
+    @media (min-width: 768px) {
+      .navbar-nav > li > a {
+        /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 26.5px;
+        padding-bottom: 26.5px;
+        line-height: 27px;
+      }
+    }
+  }
+ 
+  #navbarNavDropdown { // Navigation <ul> list
+    @media (max-width: 425px) {
+      text-align: center;
+    }
+
+    @media (min-width: 992px) {
+      padding-left: 80px;
+    }
+
+    @media (min-width: 1440px) {
+      padding-left: 130px;
+    }
+
+    @media (min-width: 2560px) {
+      padding-left: 120px;
+    }
+
+    .nav-item {
+      margin-right: 1rem;
+    }
+
+    .active a {
+      color: $yellow;
+    }
+
+    .nav-link {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: $white;
+
+      @media only screen // iPhone 6, 6S, 7 and 8 landscape
+      and (min-device-width: 375px) 
+      and (max-device-width: 667px) 
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: landscape) { 
+        font-size: 1rem;
+      }
+
+      @media (min-width: 1440px) {
+        font-size: 1.2rem;
+      }
+
+      @media (min-width: 2560px) {
+        font-size: 1.5rem;
+      }
+
+    }
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  color: #fff;
+  border-color: transparent;
+  font-size: 1.3rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbar-toggler > .close {
+  font-weight: 300;
+  display: none;
+  opacity: unset;
+  text-shadow: none;
+  font-size: 1.3rem;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.navbar-toggler[aria-expanded="true"] .close {
+  display: inline;
+
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  display: none;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 255%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

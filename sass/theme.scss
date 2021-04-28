@@ -1,0 +1,47 @@
+@import "theme/theme_variables";  // <-------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+@import "assets/bootstrap4";      // <-------- Loads Bootstrap4
+@import "understrap/understrap";  // <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
+@import "understrap/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+
+// Optional files - If you dont use the corresponding scripts/fonts comment em out
+@import "assets/font-awesome";    // <-------- Font Awesome Icon font
+
+// Any additional imported files //
+@import "theme/theme";            // <-------- That's where you can add your own design. Thats your part!
+@import "theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+
+/*
+  Custom SASS Imports  
+
+  Author: Leonardo da Costa
+*/
+
+// Base
+@import 'sass/base/variables.scss';
+@import 'sass/base/typography.scss';
+@import 'sass/base/utilities.scss';
+@import 'sass/base/bootstrap-overrides.scss';
+@import 'sass/base/base.scss';
+
+// Components
+@import 'sass/components/accordion.scss';
+@import 'sass/components/buttons.scss';
+@import 'sass/components/lightgallery-lightbox.scss';
+@import 'sass/components/product-features.scss';
+@import 'sass/components/title.scss';
+
+// Layout
+@import 'sass/layout/header.scss';
+@import 'sass/layout/footer.scss';
+@import 'sass/layout/theme.scss';
+
+// Sections
+@import 'sass/sections/section-products';
+
+// Pages
+@import 'sass/pages/faqs.scss';
+@import 'sass/pages/front-page.scss';
+@import 'sass/pages/products.scss';
+@import 'sass/pages/single-product.scss';
+@import 'sass/pages/symptoms.scss';
+@import 'sass/pages/where-to-buy.scss';

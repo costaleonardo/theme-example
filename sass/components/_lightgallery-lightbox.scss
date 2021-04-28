@@ -1,0 +1,109 @@
+/*
+  File Name: lightgallery-lightbox.scss
+  Author: Leonardo da Costa
+  Description: Theme's lightGallery Lightbox component styles.
+*/
+
+//
+// Component - Lightbox
+// --------------------------------------------------
+
+.lg-backdrop {
+  background-color: $white;
+}
+
+.lg-outer { // Hide default lightGallery controls
+  #lg-counter,
+  #lg-actual-size,
+  #lg-download,
+  .lg-fullscreen {
+    display: none;
+  }
+
+  .lg-toolbar {
+    padding: 1rem 1rem;
+  }
+
+  .lg-icon { // Upper right corner X icon
+    color: $color-primary;
+    font-size: 2rem;
+    font-weight: bold;
+
+    &:hover {
+      color: darken($color-primary, 5%);
+    }
+  }
+
+  .lg-toolbar { // Top toolbar
+    background-color: $white;
+  }
+  .lg-image {
+    max-width: 400px;
+
+    @media (min-width: 992px) { // Desktop
+      max-width: 400px;
+
+      position: relative;
+      top: 100px;
+    }
+  }
+
+  .lg-actions .lg-next, 
+  .lg-actions .lg-prev {
+    background-color: transparent;
+  }
+
+  .lg-thumb-outer {
+    background-color: $white;
+    bottom: .5rem;
+    height: auto !important;
+  }
+
+  .lg-img-wrap {
+    top: -90px !important;
+  }
+
+  .lg-thumb {
+    width: 545px!important;
+    margin: 0 auto;
+    padding: 0;
+
+    @media (min-width: 992px) {
+      width: 950px !important;
+    }
+  }
+
+  .lg-thumb-item {
+    text-align: center;
+    padding: .5rem 0;
+    border: 1px solid $color-primary;
+    border-radius: 0;
+    margin-right: 1rem !important;
+    width: 120px !important;
+
+
+    @media (min-width: 992px) {
+      width: 100px!important;
+    }
+
+    &:hover {
+      border-color: #A7A9AC !important;
+    }
+
+    &:last-child {
+      margin-right: 0 !important;
+    }
+
+    img {
+      width: 95px;
+
+      @media (min-width: 992px) {
+        width: 85px;
+      }
+    }
+  }
+
+  .lg-thumb-item.active {
+    border-color: #A7A9AC !important;
+  }
+}

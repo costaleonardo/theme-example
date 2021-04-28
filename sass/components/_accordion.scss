@@ -1,0 +1,118 @@
+/*
+  File Name: accordion.scss
+  Author: Leonardo da Costa
+  Description: Accordion component styles.
+*/
+
+//
+// Accordion
+// --------------------------------------------------
+
+.component-accordion {
+
+  .card {
+    border-color: $white;
+    border-radius: 0;
+
+    margin-bottom: 1rem;
+
+    .card-header {
+      background-image: linear-gradient(270deg, #00439A 0%, #00B2EC 36%, #00439A 100%);
+      padding: 0 1.25rem;
+
+      border: none;
+      color: $white;
+
+      transition: all .3s;
+
+      &:first-child {
+        border-radius: 0;
+      }
+
+      &[aria-expanded="true"] {
+        background-image: none;
+        background-color: $yellow;
+        color: $blue-dark;
+      }
+
+      &[aria-expanded="true"] .card-title {
+        color: $blue-dark;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .card-title { // Accordion card title
+      color: $white;
+      font-weight: bold;
+      font-size: 1.125rem;
+      position: relative;
+      top: 10px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .card-header:after { // Add icon to .card-header
+      font-family: 'FontAwesome';  
+      content: "\f0d8";
+      float: right; 
+      font-size: 2rem;
+    }
+
+    .card-header.collapsed:after { // Update .card-header when collapsed
+      /* symbol for "collapsed" panels */
+      content: "\f0d7"; 
+      // color: #fff;
+    }
+
+    .card-body {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+
+      @media (min-width: 992px) { // Desktop
+        max-width: 830px;
+      }
+
+      @media (min-width: 1440px) { // Large Desktop
+        max-width: 930px;
+      }
+    }
+
+    .card-body h4 {
+      color: #00b2ec;
+      font-weight: 700;
+    }
+
+    .btn {
+      color: $white;
+
+      font-size: 1.125rem;
+      font-weight: bold;
+
+      padding: 0;
+
+      text-align: left;
+      width: 100%;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+        text-decoration: none;
+      }
+    }
+
+    .fas {
+      color: $white;
+      font-size: 2rem;
+    }
+
+    .card-body {
+      background-color: $white;
+    }
+  }
+}

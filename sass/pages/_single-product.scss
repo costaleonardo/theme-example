@@ -1,0 +1,235 @@
+/*
+  File Name: single-product.scss
+  Author: Leonardo da Costa
+  Description: Theme's Symptoms page styles.
+*/
+
+//
+// Section - Single Product
+// --------------------------------------------------
+
+.section-single-product {
+  padding-bottom: 2.5rem;
+  
+  .lightgallery-column {
+    @media (max-width: 736px) {
+      display: none;
+    }
+
+    @media only screen // Hide on iPhone X Landscape
+    and (min-device-width: 375px) 
+    and (max-device-width: 812px) 
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) { 
+      display: none;
+    }
+
+    @media only screen 
+    and (min-device-width: 414px) 
+    and (max-device-width: 896px) 
+    and (-webkit-device-pixel-ratio : 2) { 
+      display: none;      
+    }
+  }
+ 
+  .lightgallery { // Lightbox gallery
+    padding-top: 4rem;
+    text-align: center;
+    a.divider {
+      background-color: $color-primary;
+      color: $white;
+      font-weight: bold;
+      padding-top: 35px;
+
+      @media (max-width: 768px) {
+        margin-right: .5rem;
+      }
+      text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+      transition: all .3s;
+
+      &:hover {
+        background-color: darken($color-primary, 5%);
+        text-shadow: none;
+        text-decoration: none;
+      }
+    }
+
+    a.divider img {
+      display: none;
+    }
+
+    a.divider ~ a {
+      display: none;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      border: 1px solid $color-primary;
+      margin-bottom: 1rem;
+      padding-top: .5rem;
+      width: 100px;
+      height: 100px;
+
+      @media (max-width: 768px) {
+        display: inline-block;
+      }
+    }
+
+    .lightgallery-thumbnail {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .carousel.pointer-event {
+    touch-action: auto !important;
+  }
+
+  .carousel { // Hide Carousel for tablet and above
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    .carousel-item {
+      height: 400px;
+
+      @media (min-width: 375px) {
+        height: 460px;
+      }
+
+      @media (min-width: 425px) {
+        height: 520px;
+      }
+    }
+
+    img.carousel-image {
+      margin: 0 auto;
+      height: 330px;
+
+      @media (min-width: 375px) {
+        height: 380px;
+      }
+
+      @media (min-width: 425px) {
+        height: 450px;
+      }
+    }
+
+    .carousel-indicators {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .carousel-indicators li {
+      background-color: $color-primary;
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      margin-right: 1rem;
+    }
+
+    .fas {
+      color: $color-primary;
+      font-size: 2rem;
+    }
+
+    .carousel-control-next, // Right Icon
+    .carousel-control-prev {
+      right: -15px;
+
+      @media only screen // iPhone 6+, 7+ and 8+ landsscape
+      and (min-device-width: 414px) 
+      and (max-device-width: 736px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: landscape) { 
+        right: -40px;
+      }
+    }
+
+    .carousel-control-prev { // Left Icon
+      left: -15px;
+
+      @media only screen  // iPhone 6+, 7+ and 8+ landsscape
+      and (min-device-width: 414px) 
+      and (max-device-width: 736px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: landscape) { 
+        left: -40px;
+      }
+    }
+  }
+
+  .product-header {
+    margin-bottom: 2rem;
+
+    @media (max-width: 736px) { // Tablet
+      text-align: center;
+    }
+  }
+
+  .product-title { // Product title heading
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .wp-post-image { // Show featured image
+    display: none;
+
+    @media (min-width: 768px) { // Tablet
+      display: inline;
+    }
+
+    @media (min-width: 1440px) { // Desktop
+      max-width: 330px;
+    }
+  }
+
+  .product-content-column {
+    padding-top: 1rem;
+  }
+}
+
+//
+// Section - Related Products 
+// --------------------------------------------------
+
+.section-related-products {
+  .products-container {
+    @media (min-width: 992px) { // Desktop
+      max-width: 850px;
+    }
+  }
+
+  .products-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 3rem 0;
+
+    .product-box { // Product flex box column
+      text-align: center;
+      flex: 0 50%;
+      margin-bottom: 3rem;
+  
+      @media (min-width: 768px) { // Tablet
+        flex: 0 25%;
+      }
+  
+      img { // Product image
+        margin-bottom: 1rem;
+        max-width: 100px;
+
+        @media (min-width: 768px) { // Tablet
+          margin-bottom: 2rem;
+          max-width: 130px;
+        }
+      }
+  
+      .product-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
